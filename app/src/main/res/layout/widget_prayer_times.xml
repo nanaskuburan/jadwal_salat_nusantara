@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_prayer_widget"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="12dp">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/btn_refresh_widget"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_widget_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="📍 Ngawi Kota"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_widget_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Hari ini"
+                android:textColor="#B0BEC5"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_refresh_widget"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_widget_refresh_btn"
+            android:contentDescription="Refresh Jadwal Salat"
+            android:padding="6dp"
+            android:src="@drawable/ic_widget_refresh" />
+    </RelativeLayout>
+
+    <!-- Divider -->
+    <ImageView
+        android:id="@+id/widget_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#33FFFFFF" />
+
+    <!-- 5 Prayer Times Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- Subuh -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_widget_subuh_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subuh"
+                android:textColor="#A3E635"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_widget_subuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Dzuhur -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_widget_dzuhur_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dzuhur"
+                android:textColor="#A3E635"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_widget_dzuhur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Ashar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_widget_ashar_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ashar"
+                android:textColor="#A3E635"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_widget_ashar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Maghrib -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_widget_maghrib_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maghrib"
+                android:textColor="#A3E635"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_widget_maghrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Isya -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_widget_isya_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Isya"
+                android:textColor="#A3E635"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_widget_isya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Footer Status -->
+    <TextView
+        android:id="@+id/tv_widget_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:text="Online Sync • Jadwal Salat Hari Ini"
+        android:textColor="#80CBC4"
+        android:textSize="9sp" />
+</LinearLayout>
